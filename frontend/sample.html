@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fixed Ellipses</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 1000px; /* Set to viewport height for testing */
+      background-color: #3E065F;
+      font-family: sans-serif;
+    }
+
+    .ellipse {
+      position: absolute; /* Fixes to the viewport */
+      background-color: #211C84;
+      border-radius: 50%;
+      opacity: 0.6;
+      filter: blur(60px);
+      z-index: -1; /* Ensure ellipses are behind the content */
+    }
+
+    .ellipse1 {
+      width: 600px;
+      height: 400px;
+      top: 10%; /* Fixed position relative to the viewport */
+      left: 60%;
+    }
+
+    .ellipse2 {
+      width: 500px;
+      height: 300px;
+      top: 40%;
+      left: 10%;
+    }
+
+    .ellipse3 {
+      width: 400px;
+      height: 250px;
+      bottom: 5%;
+      right: 10%;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="ellipse ellipse1"></div>
+  <div class="ellipse ellipse2"></div>
+  <div class="ellipse ellipse3"></div>
+
+  <div style="padding: 100px;">
+    <h1>Scroll Down</h1>
+    <p>Lots of content here...</p>
+    <p style="margin-top: 1500px;">Still scrolling...</p>
+  </div>
+
+</body>
+</html>
