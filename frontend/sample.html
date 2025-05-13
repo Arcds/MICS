@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fixed Ellipses</title>
+  <style>
+   /* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  color: white;
+  background-color: #3E065F;
+}
+
+/* Fixed gradient ellipses in background */
+.background-container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+
+.bg-ellipse {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.4;
+}
+
+/* Ellipse styles */
+.ellipse1 {
+  width: 800px;
+  height: 500px;
+  background: #211C84;
+  top: 10%;
+  left: 60%;
+}
+
+.ellipse2 {
+  width: 600px;
+  height: 400px;
+  background: #8E05C2;
+  top: 50%;
+  left: 10%;
+}
+
+.ellipse3 {
+  width: 700px;
+  height: 450px;
+  background: #700B97;
+  top: 90%;
+  left: 70%;
+}
+
+/* Sections */
+section {
+  min-height: 100vh;
+  padding: 100px 50px;
+  font-size: 32px;
+}
+
+
+  </style>
+</head>
+<body>
+  <!-- Background container (stays fixed) -->
+  <div class="background-container">
+    <div class="bg-ellipse ellipse1"></div>
+    <div class="bg-ellipse ellipse2"></div>
+    <div class="bg-ellipse ellipse3"></div>
+  </div>
+
+  <!-- Page content -->
+  <section class="home-section" id="home">Home Section</section>
+  <section class="about-section" id="about-us">About Us</section>
+  <section class="services-section" id="services">Services</section>
+  <section class="pricing-section" id="pricing">Pricing</section>
+</body>
+</html>
+</body>
+</html>
